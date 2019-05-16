@@ -1,3 +1,9 @@
-#weather {
+#header {
+  background-color: red;
+}
+#menu {
+  background-color: orange;
+}
+#weatherData {
   background-color: green;
 }

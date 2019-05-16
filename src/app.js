@@ -1,15 +1,14 @@
-new Vue({
-  el: '#app',
+var header = new Vue({
+  el: '#header',
   data: {
     message: 'Hello Vue.js!'
   }
 });
 
-//Component 1
-var app2 = new Vue({
-  el: '#weather',
+var menu = new Vue({
+  el: '#menu',
   data: {
-    temperature: '20' + ' degrees' // API request
+    message: 'Menu'
   }
 });
 

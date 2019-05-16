@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://unpkg.com/vue"></script>
-  <title>Weather Station</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Station</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{ message }}</p>
+    </div>
 
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+    <div id="weather">
+      <span>{{ temperature }}</span>
+    </div>
 
-  <div id="weather">
-    <span>{{ temperature }}</span>
-  </div>
-
-  <script src="./src/app.js"></script>
-</body>
+    <script src="./src/app.js"></script>
+  </body>
 </html>

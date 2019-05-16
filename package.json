@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Single page app in vue js for weather station",
   "scripts": {
+    "start": "http-server",
     "test": "jest"
   },
   "repository": {
@@ -43,6 +44,7 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{js,vue}",
+      "!**/coverage/**",
       "!**/node_modules/**"
     ]
   }

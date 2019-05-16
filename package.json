@@ -1,0 +1,22 @@
+{
+  "name": "spa-weather-station",
+  "version": "1.0.0",
+  "description": "Single page app in vue js for weather station",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hybridbad/spa-weather-station.git"
+  },
+  "author": " (placeholder)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hybridbad/spa-weather-station/issues"
+  },
+  "homepage": "https://github.com/hybridbad/spa-weather-station#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}

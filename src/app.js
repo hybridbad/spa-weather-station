@@ -1,3 +1,5 @@
+
+
 new Vue({
   el: '#app',
   data: {
@@ -11,4 +13,22 @@ var app2 = new Vue({
   data: {
     temperature: '20' + ' degrees' // API request
   }
+<<<<<<< HEAD
 });
+=======
+})
+
+var weatherData = new Vue({
+  el: '#weatherData',
+  data: {
+
+      temperature: 20
+  },
+
+  methods: {
+    increment () {
+      this.temperature++
+    }
+  }
+})
+>>>>>>> 90cb2893eab24d53473a71138c8fc31f8cb102b5

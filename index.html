@@ -5,23 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Weather Station</title>
   </head>
+
   <body>
-    <div id="header">
-      <p>{{ message }}</p>
-    </div>
+    <div class="container">
+      <div class="header" id="header">
+        <h2 v-text="componentName" v-bind:class="[accentColor, header]"></h2>
+        <h3 v-text="message"></h3>
+      </div>
 
-    <div id="menu">
-      <p>{{ message }}</p>
-    </div>
+      <div class="aside aside-1" id="menu">
+        <h2 v-text="componentName" v-bind:class="{'menu-color': true}"></h2>
+        <p>{{ list }}</p>
+        <button type="button" v-on:click="retrieveWeatherData">
+          Retrieve data
+        </button>
+      </div>
 
-    <div id="weatherData">
-      <span>{{ temperature }}</span>
-      <button @click="increment">Turn up the temp</button>
-    </div>
+      <div class="main" id="weatherData">
+        <h2 v-text="componentName" v-bind:class="{'online':isOnline}"></h2>
 
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Temperature</th>
+              <th scope="col">Pressure</th>
+              <th scope="col">Humidity</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody v-for="result in results">
+            <tr>
+              <td>{{ parseFloat(result.temperature).toFixed(2) }} C</td>
+              <td>
+                {{ parseFloat(result.pressure).toFixed(2) }}
+              </td>
+              <td>
+                {{ parseFloat(result.humidity).toFixed(2) }}
+              </td>
+              <td>
+                {{ new Date(result.date*1000).toLocaleString() }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <script src="./src/app.js"></script>
   </body>
 </html>

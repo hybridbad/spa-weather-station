@@ -2,9 +2,8 @@
   "name": "spa-weather-station",
   "version": "1.0.0",
   "description": "Single page app in vue js for weather station",
-  "main": "app.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,11 +16,34 @@
   },
   "homepage": "https://github.com/hybridbad/spa-weather-station#readme",
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
     "chromedriver": "^74.0.0",
     "geckodriver": "^1.16.2",
     "http-server": "^0.11.1",
     "jest": "^24.8.0",
+    "jsdom": "^15.1.0",
+    "jsdom-global": "^3.0.2",
     "nightwatch": "^1.0.19",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "regenerator-runtime": "^0.11.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "vue-jest": "^3.0.4",
+    "vue-template-compiler": "^2.4.4"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ]
   }
 }

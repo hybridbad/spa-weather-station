@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 Vue.component('weather-component', {
   template:`
   <div class="main" id="weatherData">
@@ -49,6 +50,7 @@ Vue.component('weather-component', {
     }
   },
   mounted() {
+    // eslint-disable-next-line no-undef
     axios
       .get('https://79ff7a55.ngrok.io/api/data/10')
       .then(response => (this.results = response.data.data.reverse()));

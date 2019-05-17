@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 Vue.component('menu-component', {
   template: `
   <div class="aside aside-1" id="menu">

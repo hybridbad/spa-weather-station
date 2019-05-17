@@ -4,24 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://unpkg.com/vue"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Weather Station</title>
   </head>
+
   <body>
-    <div id="header">
-      <p>{{ message }}</p>
+    <div class="container">
+      <div id="header">
+        <header-component></header-component>
+      </div>
+      <div class="main" id="weatherData">
+        <weather-component></weather-component>
+      </div>
+      <div class="aside aside-1" id="menu">
+        <menu-component></menu-component>
+      </div>
     </div>
-
-    <div id="menu">
-      <p>{{ message }}</p>
-    </div>
-
-    <div id="weatherData">
-      <span>{{ temperature }}</span>
-      <button @click="increment">Turn up the temp</button>
-    </div>
-
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/components/headerComponent.js"></script>
+    <script src="./src/components/weatherComponent.js"></script>
+    <script src="./src/components/menuComponent.js"></script>
     <script src="./src/app.js"></script>
   </body>
 </html>

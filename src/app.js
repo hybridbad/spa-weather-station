@@ -1,26 +1,29 @@
-var header = new Vue({
-  el: '#header',
-  data: {
-    message: 'Hello Vue.js!'
-  }
-});
 
-var menu = new Vue({
-  el: '#menu',
-  data: {
-    message: 'Menu'
-  }
-});
+new Vue({ el: '#header' })
 
-var weatherData = new Vue({
-  el: '#weatherData',
-  data: {
-    temperature: 20
-  },
+new Vue({ el: '#menu' })
 
-  methods: {
-    increment() {
-      this.temperature++;
-    }
-  }
-});
+new Vue({ el: '#weatherData'})
+
+// var header = new Vue({
+//   el: '#header',
+//   data: {
+//     componentName: 'WeatherData',
+//     message: 'Is on',
+//     accentColor: 'accent-color',
+//     header: 'header'
+//   }
+// });
+
+// var menu = new Vue({
+//   el: '#menu',
+//   data: {
+//     componentName: 'Menu',
+//     list: ['Option 1', 'Option 2']
+//   },
+//   methods: {
+//     retrieveWeatherData: function() {
+//       alert('Weather data retrieved');
+//     }
+//   }
+// });

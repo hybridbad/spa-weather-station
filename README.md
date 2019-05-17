@@ -48,7 +48,7 @@ Licensing: MIT (like jQuery, Angular)
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-Example of AXIOS request to weatherAPI
+Example of AXIOS request to weatherAPI: https://www.sitepoint.com/fetching-data-third-party-api-vue-axios/
 
 ```js
 var weatherData = new Vue({

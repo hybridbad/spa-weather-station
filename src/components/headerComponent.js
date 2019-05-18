@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 Vue.component('header-component', {
   template: `
   <div class="header" id="header">
